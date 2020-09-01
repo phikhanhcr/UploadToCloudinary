@@ -1,0 +1,20 @@
+extends ./layout/commom.pug
+block content 
+  .book 
+    .header 
+      a(href="/post" class="btn btn-primary") Create new
+    br
+    br
+    table.table
+      tr
+        th Avatar
+        th Name
+        th Age
+       
+      each user in users
+        tr
+          td        
+            img(src=user.avatar , width=64)
+          td= user.name
+          td= user.age 
+
